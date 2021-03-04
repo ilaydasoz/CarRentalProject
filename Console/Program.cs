@@ -8,13 +8,17 @@ namespace Console
     {
         static void Main(string[] args)
         {
-            
+
             CarTest();
             BrandTest();
             ColorTest();
 
-        }
+            RentalAdd();
+            UserAdd();
+            CustomerAdd();
 
+
+        }
 
         private static void CarTest()
         {
@@ -83,6 +87,55 @@ namespace Console
                 System.Console.WriteLine(result.Message);
             }
         }
+
+        private static void RentalAdd()
+        {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            var result = rentalManager.Add (new Rental
+            {
+                CarId = 9,
+                CustomerId = 1,
+                RentDate = "03.08.2010",
+                ReturnDate = "03.09.2010"
+            });
+
+            System.Console.WriteLine(result.Message);
+        }
+        private static void UserAdd()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+            var result = userManager.Add(new User
+            { 
+                Id = 1, FirstName = "İlayda Söz",
+                LastName = "Yılmaz",
+                Email = "isy@gmail.com",
+                Password = "123456"   
+            });
+
+            System.Console.WriteLine(result.Message);
+        }
+
+        private static void CustomerAdd()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            var result = customerManager.Add(new Customer
+            { 
+                UserId = 1,
+                CustomerId = 4, 
+                CompanyName = "A Company"
+
+            });
+
+            System.Console.WriteLine(result.Message);
+        }
+
+
+
+
+
+
+
+    }
     }
 }
 

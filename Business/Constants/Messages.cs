@@ -25,6 +25,23 @@ namespace Business.Constants
         public static string ColorUpdated = "Color uptaded.";
         public static string ColorsListed = "Colors are listed.";
 
+        public static string UserAdded = "User added.";
+        public static string UserDeleted = "User deleted.";
+        public static string UserUpdated = "User uptaded.";
+        public static string UsersListed = "Users are listed.";
+
+        public static string CustomerAdded = "Customer added.";
+        public static string CustomerDeleted = "Customer deleted.";
+        public static string CustomerUpdated = "Customer uptaded.";
+        public static string CustomersListed = "Customers are listed.";
+
+        public static string RentalAdded = "Rental added.";
+        public static string RentalDeleted = "Rental deleted.";
+        public static string RentalUpdated = "Rental uptaded.";
+        public static string RentalsListed = "Rentals are listed.";
+
+
+
 
 
     }
