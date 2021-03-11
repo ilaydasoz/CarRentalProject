@@ -93,6 +93,7 @@ namespace Console
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
             var result = rentalManager.Add (new Rental
             {
+                RentalId = 1,
                 CarId = 9,
                 CustomerId = 1,
                 RentDate = "03.08.2010",
@@ -106,7 +107,8 @@ namespace Console
             UserManager userManager = new UserManager(new EfUserDal());
             var result = userManager.Add(new User
             { 
-                Id = 1, FirstName = "İlayda Söz",
+                Id = 1,
+                FirstName = "İlayda Söz",
                 LastName = "Yılmaz",
                 Email = "isy@gmail.com",
                 Password = "123456"   
@@ -120,8 +122,8 @@ namespace Console
             CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
             var result = customerManager.Add(new Customer
             { 
+                Id = 1,
                 UserId = 1,
-                CustomerId = 4, 
                 CompanyName = "A Company"
 
             });
@@ -130,12 +132,7 @@ namespace Console
         }
 
 
-
-
-
-
-
     }
     }
-}
+
 
